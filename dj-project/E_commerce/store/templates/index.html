@@ -1,0 +1,12 @@
+
+{% block content %}
+    <h2>Products</h2>
+    {% for product in products %}
+        <div>
+            <a href="{{ product.get_absolute_url }}">
+                <img src="{{ product.image.url }}" width="150">
+                <p>{{ product.name }} - ${{ product.price }}</p>
+            </a>
+        </div>
+    {% endfor %}
+{% endblock %}
